@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "../utils/send-email";
 import { Button } from "./ui/button";
@@ -15,7 +16,7 @@ export type FormData = {
 };
 
 export const Contact = () => {
-  const { register, handleSubmit } = useForm<FormData>();
+  const { register, handleSubmit, formState } = useForm<FormData>();
 
   function onSubmit(data: FormData) {
     sendEmail(data);
@@ -52,13 +53,36 @@ export const Contact = () => {
           />
         </div>
         <div>
-          <Button
-            variant="default"
-            type="submit"
-            className="hover:shadow-form  mt-4"
-          >
-            Tilmeld venteliste
-          </Button>
+          <AnimatePresence>
+            {formState.isSubmitSuccessful && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="text-green-400 mt-4"
+                transition={{ duration: 0.3 }}
+              >
+                Tak for din tilmelding! Vi kontakter dig snarest.
+              </motion.div>
+            )}
+            {!formState.isSubmitSuccessful && (
+              <motion.div
+                initial={{ opacity: 0, x: 0 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -10 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Button
+                  variant="default"
+                  type="submit"
+                  className="hover:shadow-form mt-4"
+                  disabled={formState.isSubmitting}
+                >
+                  Tilmeld venteliste
+                </Button>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </form>
     </div>

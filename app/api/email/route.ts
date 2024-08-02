@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
   console.log("Sending email to Resend");
   resend.emails.send({
     from: "onboarding@resend.dev",
-    to: "toke@letsgrow.sale",
+    to: "malte@holledig.dk",
     subject: `Freja.ai lead: ${name}`,
     html: `<h3>Name: ${name}</h3><h3>Email: ${email}</h3><h3>Workplace: ${workplace}</h3><h3>Phone: ${phone}</h3><h3>Message: ${message}</h3>`,
   });
