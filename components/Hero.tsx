@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <>
       <FrejaLogo className="h-20 mx-auto" />
-      <div className="flex flex-col items-center justify-center gap-10 pt-16">
+      <div className="flex flex-col items-center justify-center gap-4 md:gap-10 pt-4 md:pt-16">
         <h1 className="text-6xl font-bold text-white">
           Freja.ai er en{" "}
           <FlipWords className="text-white" words={words}></FlipWords> <br />
