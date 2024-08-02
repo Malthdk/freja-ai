@@ -1,11 +1,7 @@
 "use client";
 
 import { useLayoutEffect, useState } from "react";
-import HumeLogo from "./logos/Hume";
-import { Button } from "./ui/button";
-import { Moon, Sun } from "lucide-react";
-import Github from "./logos/GitHub";
-import pkg from '@/package.json';
+import { FrejaLogo } from "./logos/Freja";
 
 export const Nav = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -33,26 +29,10 @@ export const Nav = () => {
       }
     >
       <div>
-        <HumeLogo className={"h-5 w-auto"} />
+        <FrejaLogo className={"h-7 w-full"} />
       </div>
       <div className={"ml-auto flex items-center gap-1"}>
-        <Button
-          onClick={() => {
-            window.open(
-              pkg.homepage,
-              "_blank",
-              "noopener noreferrer"
-            );
-          }}
-          variant={"ghost"}
-          className={"ml-auto flex items-center gap-1.5"}
-        >
-          <span>
-            <Github className={"size-4"} />
-          </span>
-          <span>Star on GitHub</span>
-        </Button>
-        <Button
+        {/* DARKMODE : <Button
           onClick={toggleDark}
           variant={"ghost"}
           className={"ml-auto flex items-center gap-1.5"}
@@ -65,7 +45,7 @@ export const Nav = () => {
             )}
           </span>
           <span>{isDarkMode ? "Light" : "Dark"} Mode</span>
-        </Button>
+        </Button> */}
       </div>
     </div>
   );

@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
+import type { Metadata } from "next";
+import { cn } from "../utils";
 import "./globals.css";
-import { Nav } from "@/components/Nav";
-import { cn } from "@/utils";
 
 export const metadata: Metadata = {
-  title: "Hume AI - EVI - Next.js Starter",
-  description: "A Next.js starter using Hume AI's Empathic Voice Interface",
+  title: "Freja AI",
+  description:
+    "Freja.ai er en risikofri AI-drevet salgstræning der efterligner køber persona.",
 };
 
 export default function RootLayout({
@@ -21,10 +21,10 @@ export default function RootLayout({
         className={cn(
           GeistSans.variable,
           GeistMono.variable,
-          "flex flex-col min-h-screen"
+          "flex flex-col min-h-screen bg-black"
         )}
       >
-        <Nav />
+        {/* <Nav /> */}
         {children}
       </body>
     </html>

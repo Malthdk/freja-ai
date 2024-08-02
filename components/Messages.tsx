@@ -1,9 +1,9 @@
 "use client";
-import { cn } from "@/utils";
 import { useVoice } from "@humeai/voice-react";
-import Expressions from "./Expressions";
 import { AnimatePresence, motion } from "framer-motion";
 import { ComponentRef, forwardRef } from "react";
+import { cn } from "../utils";
+import Expressions from "./Expressions";
 
 const Messages = forwardRef<
   ComponentRef<typeof motion.div>,

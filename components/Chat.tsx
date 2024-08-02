@@ -1,10 +1,10 @@
 "use client";
 
 import { VoiceProvider } from "@humeai/voice-react";
-import Messages from "./Messages";
-import Controls from "./Controls";
-import StartCall from "./StartCall";
 import { ComponentRef, useRef } from "react";
+import Controls from "./Controls";
+import Messages from "./Messages";
+import StartCall from "./StartCall";
 
 export default function ClientComponent({
   accessToken,
@@ -13,7 +13,7 @@ export default function ClientComponent({
 }) {
   const timeout = useRef<number | null>(null);
   const ref = useRef<ComponentRef<typeof Messages> | null>(null);
-  
+
   return (
     <div
       className={
