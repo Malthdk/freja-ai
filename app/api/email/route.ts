@@ -7,7 +7,7 @@ export async function POST(request: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
-    resend.emails.send({
+    await resend.emails.send({
       from: "onboarding@resend.dev",
       to: "malte@holledig.dk",
       subject: `Freja.ai lead: ${name}`,
