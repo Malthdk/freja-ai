@@ -2,7 +2,7 @@ import { FlipWords } from "./FlipWords";
 import { FrejaLogo } from "./logos/Freja";
 
 export const Hero = () => {
-  const words = ["risikofri", "moderne", "hurtig"];
+  const words = ["AI-drevet", "risikofri"];
 
   return (
     <>
@@ -11,14 +11,13 @@ export const Hero = () => {
         <h1 className="text-6xl font-bold text-white">
           Freja.ai er en{" "}
           <FlipWords className="text-white" words={words}></FlipWords> <br />
-          AI-drevet salgstræning der efterligner køber persona.
+          salgstræning der efterligner din købers persona.
         </h1>
         <div className="text-2xl font-bold text-white">
           <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#22d3ee] via-[#38bdf8] to-[#818cf8]">
-            Dette skærer ned på behovet for rolle-spil med salgschefen, dyre
-            ansættelser, tab af kundeemner, da du forbedrer præstationer mod din
-            målgruppe. Samtidig giver det sælgere mulighed for at øve og
-            forbedre mødebooking og salg.
+            Skær ned på det akavede rolle-spil med salgschefen eller
+            teamlederen. Undgå de dyre ansættelser og den lange ramp-up time på
+            nye mødebookere og sælgere.
           </span>
         </div>
       </div>

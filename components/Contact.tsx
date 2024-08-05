@@ -59,10 +59,10 @@ export const Contact = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="text-green-400 mt-4"
+                className="text-gray-100 mt-4"
                 transition={{ duration: 0.3 }}
               >
-                Tak for din tilmelding! Vi kontakter dig snarest.
+                Tak for din tilmelding
               </motion.div>
             )}
             {!formState.isSubmitSuccessful && (
